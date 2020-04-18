@@ -92,15 +92,15 @@ header nav a.activo{
 }
 /*------------------   Contenedor titulo y controles-------------------*/
 .contenedor-titulo-controles{
-    display:flex;
     justify-content: space-between;
     align-items: end;
+
 }
 .contenedor-titulo-controles h3{
     color:var(--blanco);
     font-size: 30px;
 }
-contenedor-titulo-controles .indicadores button{
+.contenedor-titulo-controles .indicadores button{
     background:#fff;
     height:3px;
     width:10px;
@@ -109,8 +109,8 @@ contenedor-titulo-controles .indicadores button{
     margin-right: 2px;
 
 }
-contenedor-titulo-controles .indicadores button:hover,
-contenedor-titulo-controles .indicadores button.activo{
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo{
 background: var(--rojo);
 }
 /*------------------   Contenedor principal y flechas-------------------*/
@@ -149,11 +149,11 @@ background: var(--rojo);
 .peliculas-recomendadas .contenedor-principal .flecha-derecha{
     right:0;
 }
-/*------------------   Carousel MIN30:26 -------------------*/
+/*------------------   Carousel -------------------*/
 .peliculas-recomendadas .contenedor-carousel{
     width:100%;
     padding:20px 0;
-    overflow: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
 }
 .peliculas-recomendadas .contenedor-carousel .carousel{
@@ -165,31 +165,11 @@ background: var(--rojo);
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
+
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula img{
     width:100%;
     vertical-align: top;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*------------------   Media Queries-------------------*/
 @media screen  and (max-width:800px){
     header .logotipo{
@@ -208,4 +188,18 @@ background: var(--rojo);
     .pelicula-principal .descripcion{
         max-width: 100%;
     }
+    .peliculas-recomendadas .contenedor-carousel{
+        overflow:visible;
+    }
+    .peliculas-recomendadas .contenedor-carousel .carousel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:20px;
+    }
+    .peliculas-recomendadas .indicadores,
+    .peliculas-recomendadas .flecha-izquierda,
+    .peliculas-recomendadas .flecha-derecha{
+        display:none;
+    }
+
 }

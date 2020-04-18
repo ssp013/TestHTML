@@ -1,3 +1,1 @@
-function despliegue(){
-    
-}
+const fila ; //Contenedor carousel
